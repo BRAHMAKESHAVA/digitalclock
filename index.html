@@ -9,18 +9,25 @@
             text-align: center;
             margin-top: 20%;
             padding: 30px 30px;
-            background: black;
+            font-size: 50px;
             color: whitesmoke;
+           
+
+        }
+        body{
+            background-color: black;
             border-left: 3px solid red;
             border-right: 3px solid red;
             border-top: 2px solid red;
             border-bottom: 2px solid red;
-
+            height: 100vh;
+            padding: 30px;
+            margin: 50px;
         }
     </style>
 </head>
 <body onload="showTime()">
-    <h1></h1>
+    <h1 id="timer"></h1>
     
 </body>
 <script type="text/javascript">
@@ -43,7 +50,7 @@
         s = s<10? "0"+s : s;
 
         var time = h+" : "+m+" : "+s+" "+session;
-        document.getElementsByTagName("h1")[0].innerText=time;
+        document.getElementById("timer").textContent=time;
         setTimeout(showTime,1000);
     }
 </script>
